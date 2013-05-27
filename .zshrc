@@ -73,7 +73,18 @@ pycd(){ cd $(dirname $(python -c "print __import__('$1').__file__")); }
 
 #ntpupdate(){sudo ntpdate cn.pool.ntp.org}
 
-#alias t='python ~/.t/t.py --task-dir ~/.tasks --list tasks'
+#alias treepy='tree -I "*.pyc"'
+
+alias t='python ~/.t/t.py --task-dir ~/.tasks --list tasks'
+alias tpush='cd ~/.tasks/; git add tasks .tasks.done; git commit -m "add tasks"; git push'
+alias tpull='cd ~/.tasks/; git pull'
+alias tst='cd ~/.tasks/; git status'
 #alias s='python ~/.t/t.py --task-dir ~/.tasks --list someday'
 
-#alias treepy='tree -I "*.pyc"'
+alias treepy='tree -I "*.pyc"'
+
+alias less='less --LINE-NUMBERS'
+
+alias dpcli='cd /home/tankywoo/.tasks/;dropbox-cli filestatus'
+alias vix='vi --cmd "set expandtab"'
+
