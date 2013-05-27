@@ -8,6 +8,7 @@ set nu		" set the line number
 syntax on		" syntax highlighting
 set autochdir		" set the current dir as thr work dir
 set hlsearch		" highlight the search result
+set incsearch       	" real-time search
 filetype on			" file type detection
 filetype plugin on	" loading the plugin files for specific file types
 filetype indent on	" loading the indent file for specific file types with
