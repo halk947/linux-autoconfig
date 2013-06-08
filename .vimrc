@@ -33,15 +33,19 @@ set fileencodings=utf-8,gb18030,cp936,big5 " set the encode
 set t_Co=256 " if under tty, use 256
 set pastetoggle=<F11>
 set list
-set listchars=tab:>-,trail:-
+set listchars=tab:>-,trail:.
 nmap <leader>l :set list!<CR>
 ""hi NonText ctermfg=247 guifg=#a73111 cterm=bold gui=bold
 ""hi SpecialKey ctermfg=77 guifg=#654321
 
 "==========================
 " Plugins Configuration
-let Tlist_Show_One_File=1	"TagList
+" TagList
+let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
+" PyDiction
+let g:pydiction_location = '/home/tankywoo/.vim/bundle/Pydiction/complete-dict'
+let g:pydiction_menu_height = 10
 
 
 """"""""""""""""""""""""""""
@@ -92,7 +96,7 @@ autocmd bufnewfile *.sh call HeaderBash()
 "============================
 " Bundle Configuration
 "============================
-set nocompatible               " be iMproved
+""set nocompatible               " be iMproved
 filetype off                   " required!
 
 set rtp+=~/.vim/bundle/vundle/
@@ -114,7 +118,13 @@ Bundle 'snipMate'
 Bundle 'ZenCoding.vim'
 Bundle 'desert256.vim'
 Bundle 'Tabular'
-Bundle 'AutoClose'
+"Bundle 'AutoClose'
+Bundle 'Auto-Pairs'
+Bundle 'Pydiction'
+Bundle 'The-NERD-tree'
+Bundle 'SuperTab-continued.'
+
+
 
 " non github repos
 
