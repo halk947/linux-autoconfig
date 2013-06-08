@@ -46,7 +46,9 @@ let Tlist_Exit_OnlyWindow=1
 " PyDiction
 let g:pydiction_location = '/home/tankywoo/.vim/bundle/Pydiction/complete-dict'
 let g:pydiction_menu_height = 10
-
+" NERDTree
+nmap <leader>t :NERDTree<CR>
+nmap <leader>tt :NERDTreeClose<CR>
 
 """"""""""""""""""""""""""""
 " VimWiki Plugin
@@ -114,15 +116,17 @@ Bundle 'kevinw/pyflakes-vim'
 " vim-scripts repos
 Bundle 'vimwiki'
 Bundle 'taglist.vim'
+"snipMate会和PyDiction冲突, 需要修改其中之一的代码,具体Google
 Bundle 'snipMate'
 Bundle 'ZenCoding.vim'
-Bundle 'desert256.vim'
+"Bundle 'desert256.vim'
 Bundle 'Tabular'
 "Bundle 'AutoClose'
+" Auto-Pairs 比 AutoClose 好用多了
 Bundle 'Auto-Pairs'
 Bundle 'Pydiction'
 Bundle 'The-NERD-tree'
-Bundle 'SuperTab-continued.'
+"Bundle 'SuperTab-continued.'
 
 
 
