@@ -49,6 +49,10 @@ let g:pydiction_menu_height = 10
 " NERDTree
 nmap <leader>t :NERDTree<CR>
 nmap <leader>tt :NERDTreeClose<CR>
+" vim-powerline
+set laststatus=2   " Always show the statusline
+set encoding=utf-8 " Necessary to show Unicode glyphs
+set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors"
 
 """"""""""""""""""""""""""""
 " VimWiki Plugin
@@ -112,6 +116,7 @@ Bundle 'gmarik/vundle'
 "
 " original repos on github
 Bundle 'kevinw/pyflakes-vim'
+Bundle 'Lokaltog/vim-powerline'
 
 " vim-scripts repos
 Bundle 'vimwiki'
