@@ -31,9 +31,12 @@ set cc=81		" short for colorcolumn
 colorscheme desert
 set fileencodings=utf-8,gb18030,cp936,big5 " set the encode
 set t_Co=256 " if under tty, use 256
+set pastetoggle=<F11>
 set list
 set listchars=tab:>-,trail:-
-set pastetoggle=<F11>
+nmap <leader>l :set list!<CR>
+""hi NonText ctermfg=247 guifg=#a73111 cterm=bold gui=bold
+""hi SpecialKey ctermfg=77 guifg=#654321
 
 "==========================
 " Plugins Configuration
