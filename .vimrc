@@ -117,6 +117,7 @@ Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'kevinw/pyflakes-vim'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'plasticboy/vim-markdown'
 
 " vim-scripts repos
 Bundle 'vimwiki'

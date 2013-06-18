@@ -24,7 +24,7 @@ ZSH_THEME="jtriley"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
@@ -32,7 +32,8 @@ ZSH_THEME="jtriley"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git svn python colored-man screen)
+#plugins=(git svn python colored-man screen)
+plugins=(git svn python colored-man )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -71,7 +72,7 @@ export LESS_TERMCAP_us=$'\E[1;32m' # begin underline
 
 pycd(){ cd $(dirname $(python -c "print __import__('$1').__file__")); }
 
-#ntpupdate(){sudo ntpdate cn.pool.ntp.org}
+ntpupdate(){sudo ntpdate cn.pool.ntp.org}
 
 #alias treepy='tree -I "*.pyc"'
 
@@ -80,6 +81,10 @@ alias tpush='cd ~/.tasks/; git add tasks .tasks.done; git commit -m "add tasks";
 alias tpull='cd ~/.tasks/; git pull'
 alias tst='cd ~/.tasks/; git status'
 #alias s='python ~/.t/t.py --task-dir ~/.tasks --list someday'
+alias ks='python ~/.t/t.py --task-dir ~/.tasks --list works'
+alias kspush='cd ~/.tasks/; git add works .works.done; git commit -m "add works"; git push'
+alias kspull='cd ~/.tasks/; git pull'
+alias ksst='cd ~/.tasks/; git status'
 
 alias treepy='tree -I "*.pyc"'
 
@@ -87,4 +92,3 @@ alias less='less --LINE-NUMBERS'
 
 alias dpcli='cd /home/tankywoo/.tasks/;dropbox-cli filestatus'
 alias vix='vi --cmd "set expandtab"'
-
