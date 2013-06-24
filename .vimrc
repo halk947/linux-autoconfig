@@ -53,6 +53,7 @@ nmap <leader>tt :NERDTreeClose<CR>
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
 set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors"
+au BufRead,BufNewFile *.md set filetype=markdown  " .md default is modula2
 
 """"""""""""""""""""""""""""
 " VimWiki Plugin
@@ -117,7 +118,7 @@ Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'kevinw/pyflakes-vim'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'plasticboy/vim-markdown'
+"Bundle 'plasticboy/vim-markdown'
 
 " vim-scripts repos
 Bundle 'vimwiki'
