@@ -74,21 +74,24 @@ pycd(){ cd $(dirname $(python -c "print __import__('$1').__file__")); }
 
 ntpupdate(){sudo ntpdate cn.pool.ntp.org}
 
-#alias treepy='tree -I "*.pyc"'
+alias treepy='tree -I "*.pyc"'
 
 alias t='python ~/.t/t.py --task-dir ~/.tasks --list tasks'
-alias tpush='cd ~/.tasks/; git add tasks .tasks.done; git commit -m "add tasks"; git push'
-alias tpull='cd ~/.tasks/; git pull'
-alias tst='cd ~/.tasks/; git status'
+alias tpush='cd ~/.tasks/; git add tasks .tasks.done; git commit -m "add tasks"; git push; cd -'
+alias tpull='cd ~/.tasks/; git pull; cd -'
+alias tst='cd ~/.tasks/; git status; cd -'
 #alias s='python ~/.t/t.py --task-dir ~/.tasks --list someday'
-alias ks='python ~/.t/t.py --task-dir ~/.tasks --list works'
-alias kspush='cd ~/.tasks/; git add works .works.done; git commit -m "add works"; git push'
-alias kspull='cd ~/.tasks/; git pull'
-alias ksst='cd ~/.tasks/; git status'
+alias ks='python ~/.t/t.py --task-dir ~/.tasks --list works; cd -'
+alias kspush='cd ~/.tasks/; git add works .works.done; git commit -m "add works"; git push; cd -'
+alias kspull='cd ~/.tasks/; git pull; cd -'
+alias ksst='cd ~/.tasks/; git status; cd -'
 
 alias treepy='tree -I "*.pyc"'
 
-alias less='less --LINE-NUMBERS'
+#alias less='less --LINE-NUMBERS'
 
-alias dpcli='cd /home/tankywoo/.tasks/;dropbox-cli filestatus'
+#alias dpcli='cd /home/tankywoo/.tasks/;dropbox-cli filestatus'
 alias vix='vi --cmd "set expandtab"'
+
+#alias tmux="TERM=screen-256color-bce tmux"
+alias tmux='tmux -2'

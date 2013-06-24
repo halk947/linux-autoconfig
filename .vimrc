@@ -28,6 +28,7 @@ set showmode		" show the mode
 set nobackup		" no backup
 " hi cursorline   gui=UNDERLINE cterm=UNDERLINE
 set cc=81		" short for colorcolumn
+hi ColorColumn ctermbg=lightgrey guibg=lightgreya  " highlighter cc
 colorscheme desert
 set fileencodings=utf-8,gb18030,cp936,big5 " set the encode
 set t_Co=256 " if under tty, use 256
