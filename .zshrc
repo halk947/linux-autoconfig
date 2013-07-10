@@ -33,7 +33,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #plugins=(git svn python colored-man screen)
-plugins=(git svn python colored-man )
+plugins=(git svn python colored-man tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -94,4 +94,4 @@ alias treepy='tree -I "*.pyc"'
 alias vix='vi --cmd "set expandtab"'
 
 #alias tmux="TERM=screen-256color-bce tmux"
-alias tmux='tmux -2'
+alias tmux="tmux -2"
