@@ -1,4 +1,5 @@
 " Author: Tanky Woo
+" Email: me@tankywoo.com
 " Blog: www.wutianqi.com
 
 """"""""""""""""""""""""""""
@@ -56,45 +57,38 @@ set encoding=utf-8 " Necessary to show Unicode glyphs
 set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors"
 au BufRead,BufNewFile *.md set filetype=markdown  " .md default is modula2
 
-""""""""""""""""""""""""""""
-" VimWiki Plugin
-""""""""""""""""""""""""""""
-let g:vimwiki_list = [{'path': '/home/tankywoo/wiki/',
-            \ 'path_html': '/home/tankywoo/wiki/html/',
-            \ 'template_path': '/home/tankywoo/wiki/html/template/',
-            \ 'template_default': 'template',
-            \ 'template_ext': '.html',
-            \ 'nested_syntaxes' : {'python': 'python', 'c++': 'cpp', 'shell': 'shell'}}]
-let g:vimwiki_camel_case = 0
-let g:vimwiki_list_ignore_newline = 0
-" 个人喜欢utf-8，要换的话下面模板中编码也要改
-"set encoding=utf-8
-map <F4> <Plug>Vimwiki2HTML
-map <S-F4> <Plug>VimwikiAll2HTML
+""""""""""""""""""""""""""""""""""""
+" VimWiki Configuration (Deprecated)
+""""""""""""""""""""""""""""""""""""
+" let g:vimwiki_list = [{'path': '/home/tankywoo/wiki/',
+"             \ 'path_html': '/home/tankywoo/wiki/html/',
+"             \ 'template_path': '/home/tankywoo/wiki/html/template/',
+"             \ 'template_default': 'template',
+"             \ 'template_ext': '.html',
+"             \ 'nested_syntaxes' : {'python': 'python', 'c++': 'cpp', 'shell': 'shell'}}]
+" let g:vimwiki_camel_case = 0
+" let g:vimwiki_list_ignore_newline = 0
+" " 个人喜欢utf-8，要换的话下面模板中编码也要改
+" "set encoding=utf-8
+" map <F4> <Plug>Vimwiki2HTML
+" map <S-F4> <Plug>VimwikiAll2HTML
 
 
-""""""""""""""""""""""""""""
-" Auto add the head by .py file
-""""""""""""""""""""""""""""
+" .py file auto add header
 function HeaderPython()
     call setline(1, "#!/usr/bin/env python")
     call append(1,  "# -*- coding: utf-8 -*-")
-    call append(2,  "# wutq@" . strftime('%Y-%m-%d', localtime()))
-    "call append(3,  "# vim: set noexpandtab tabstop=4 shiftwidth=4 softtabstop=4:")
+    call append(2,  "# Tanky Woo@" . strftime('%Y-%m-%d', localtime()))
     normal G
     normal o
     normal o
 endf
 autocmd bufnewfile *.py call HeaderPython()
 
-""""""""""""""""""""""""""""
-" Auto add the head by .sh file
-""""""""""""""""""""""""""""
+" .sh file auto add header
 function HeaderBash()
     call setline(1, "#!/bin/bash")
     call append(1,  "# Tanky Woo@" . strftime('%Y-%m-%d %T', localtime()))
-    call append(2,  "# About: ")
-    "call append(3,  "# vim: set noexpandtab tabstop=4 shiftwidth=4 softtabstop=4:")
     normal G
     normal o
     normal o
