@@ -114,6 +114,7 @@ Bundle 'gmarik/vundle'
 Bundle 'kevinw/pyflakes-vim'
 Bundle 'Lokaltog/vim-powerline'
 "Bundle 'plasticboy/vim-markdown'
+Bundle 'fs111/pydoc.vim'
 
 " vim-scripts repos
 Bundle 'vimwiki'
@@ -129,6 +130,7 @@ Bundle 'Auto-Pairs'
 Bundle 'Pydiction'
 Bundle 'The-NERD-tree'
 "Bundle 'SuperTab-continued.'
+Bundle 'neocomplcache'
 
 
 
