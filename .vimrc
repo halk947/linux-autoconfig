@@ -41,6 +41,8 @@ nmap <leader>l :set list!<CR>
 ""hi SpecialKey ctermfg=77 guifg=#654321
 " Execute file being edited with <Shift> + e:
 map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
+" Execute markdown to html with <Shift> + t:
+" map <buffer> <S-t> :w<CR>:!python /home/tankywoo/wiki/tool.py % <CR>
 
 "==========================
 " Plugins Configuration
