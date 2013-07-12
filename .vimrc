@@ -2,9 +2,9 @@
 " Email: me@tankywoo.com
 " Blog: www.wutianqi.com
 
-""""""""""""""""""""""""""""
+"==========================
 " General
-""""""""""""""""""""""""""""
+"==========================
 set nu		" set the line number
 syntax on	" syntax highlighting
 set autochdir	" set the current dir as thr work dir
@@ -39,9 +39,12 @@ set listchars=tab:>-,trail:.
 nmap <leader>l :set list!<CR>
 ""hi NonText ctermfg=247 guifg=#a73111 cterm=bold gui=bold
 ""hi SpecialKey ctermfg=77 guifg=#654321
+" Execute file being edited with <Shift> + e:
+map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
 
 "==========================
 " Plugins Configuration
+"==========================
 " TagList
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
@@ -59,9 +62,9 @@ au BufRead,BufNewFile *.md set filetype=markdown  " .md default is modula2
 " neocomplcache
 " let g:neocomplcache_enable_at_startup = 1
 
-""""""""""""""""""""""""""""""""""""
+"==========================
 " VimWiki Configuration (Deprecated)
-""""""""""""""""""""""""""""""""""""
+"==========================
 " let g:vimwiki_list = [{'path': '/home/tankywoo/wiki/',
 "             \ 'path_html': '/home/tankywoo/wiki/html/',
 "             \ 'template_path': '/home/tankywoo/wiki/html/template/',
