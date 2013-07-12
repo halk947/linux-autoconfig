@@ -56,6 +56,8 @@ set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
 set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors"
 au BufRead,BufNewFile *.md set filetype=markdown  " .md default is modula2
+" neocomplcache
+" let g:neocomplcache_enable_at_startup = 1
 
 """"""""""""""""""""""""""""""""""""
 " VimWiki Configuration (Deprecated)
